@@ -1,4 +1,4 @@
-# mailernative
+# Pathgrah debugger
 
 ## Project setup
 ```
