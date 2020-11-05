@@ -1,0 +1,117 @@
+:root {
+  --pry: #6C63FF;
+  --pry-gradient: linear-gradient(180deg, rgba(108, 99, 255, 0.8) 0%, rgba(108, 99, 255, 0.97) 107.97%);
+  --pry-tint-1: #766dff;
+  --pry-tint-2: #9d97ff;
+  --pry-tint-3: #bcb9ff;
+  --pry-shade-1: #564bff;
+  --pry-shade-2: #4034ff;
+  --pry-shade-3: #1305ff;
+  --red: #8F0622;
+  --green: #219653;
+  --purple: #9B51E0;
+  --grey: #ececec;
+  --grey-shade-1: #dcdcdc;
+  --grey-shade-2: #cdcdcd;
+  --grey-shade-3: #bdbdbd;
+  --grey-shade-4: #adadad;
+  --grey-shade-5: #9d9d9d;
+  --link-color: #A945FF;
+  --black: #151a28;
+  --yellow: #EBEF3B;
+  --white: #fff;
+  --none: transparent;
+  --error: #ef4e23;
+  --success: #59d065;
+  --info: #54c5dd ;
+}
+
+/*Sizing*/
+.container {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.socials {
+  max-width: 400px;
+}
+.socials button {
+  border-radius: 100% !important;
+  padding: 5px !important;
+}
+.socials button:hover {
+  margin-top: 5px !important;
+}
+
+.account-link {
+  min-width: 80px !important;
+}
+
+nav {
+  justify-content: space-between;
+}
+nav > ul:not(.actions) {
+  display: none !important;
+}
+nav > ul.actions li:not(.search_btn) {
+  display: none;
+}
+nav > ul.actions li.search_btn {
+  margin-left: auto;
+}
+
+input[type=text], input[type=email], input[type=password], textarea {
+  display: block;
+  width: 100%;
+  padding: !important;
+  border: 1px solid var(--grey-shade-2);
+  resize: vertical;
+}
+
+.trending-article {
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 240px !important;
+}
+.trending-article:hover {
+  box-shadow: 12px 3px 41px rgba(33, 117, 155, 0.13);
+}
+.trending-article label {
+  text-transform: uppercase;
+  letter-spacing: 5px;
+}
+.trending-article .img {
+  position: relative;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  z-index: 1;
+  min-height: 110px !important;
+}
+.trending-article .img img, .trending-article .img .img {
+  width: 100%;
+  /*max-width: 130px!important;*/
+  object-fit: cover !important;
+  border-top-left-radius: 15px !important;
+  border-top-right-radius: 15px !important;
+  height: 110px !important;
+}
+.trending-article .img .shade {
+  z-index: 2;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  min-height: 200px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+.trending-article .img .user-name {
+  /*text-transform: uppercase;*/
+}
+
+main {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+/*# sourceMappingURL=mobile-tablet.css.map */

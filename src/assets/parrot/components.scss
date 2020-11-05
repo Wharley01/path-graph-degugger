@@ -1,0 +1,235 @@
+// Components here
+.input{
+  @extend .focus\:shadow-outline-pry;
+  @extend .bd-round-x2;
+  @extend .inline-block;
+  @extend .p-r-x4;
+  @extend .p-l-x4;
+  @extend .p-t-x3;
+  @extend .p-b-x3;
+  @extend .bd-c-grey-shade-1;
+  @extend .bd-x1;
+}
+
+.button{
+   @extend .bg-pry;
+   @extend .bd-none;
+   @extend .p-l-x9;
+   @extend .p-r-x9;
+   @extend .p-t-x3;
+   @extend .p-b-x3;
+   @extend .bd-round-x2;
+   @extend .focus\:shadow-outline-pry-tint-2;
+   white-space: nowrap;
+ }
+.button-x1{
+  @extend .bg-pry;
+  @extend .bd-none;
+  @extend .p-l-x3;
+  @extend .p-r-x3;
+  @extend .p-t-x2;
+  @extend .p-b-x2;
+  @extend .bd-round-x2;
+  @extend .focus\:shadow-outline-pry-tint-2;
+  white-space: nowrap;
+}
+.input-x1{
+  @extend .p-t-x2;
+  @extend .p-b-x2;
+  @extend .p-l-x4;
+  @extend .p-r-x4;
+  @extend .bd-round-x2;
+  @extend .bd-x1;
+  @extend .m-t-auto;
+  @extend .m-b-auto;
+  @extend .bd-c-pry;
+  @extend .w-full;
+  @extend .inline-block;
+  max-width: 300px;
+
+}
+.card{
+  @extend .p-x6;
+  @extend .bd-round-x4;
+  @extend .shadow-x4;
+  transition: none;
+}
+
+
+.header_bg{
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+}
+
+
+.body_bg{
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+
+.interlude{
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.phone{
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: cover;
+}
+
+.container{
+  @extend .m-l-auto;
+  @extend .m-r-auto;
+  @extend .p-x5;
+  max-width: 1200px;
+}
+
+.error-list{
+  ul{
+    padding-left: 15px;
+    @extend .txt-c-error;
+    li{
+      margin-bottom: 4px;
+    }
+  }
+}
+
+body{
+  overflow-x: hidden;
+}
+
+/* SCSS */
+.vue-typer {
+  /* Styles for the vue-typer container
+     e.g. font-family, font-size  */
+
+  .custom.char {
+    /* Styles for each character
+       e.g. color, background-color */
+
+    &.typed {
+      /* Styles specific to typed characters
+         i.e. characters to the left of the caret */
+      @extend .txt-c-white
+    }
+    &.selected {
+      /* Styles specific to selected characters
+         i.e. characters to the right of the caret while VueTyper's
+              'eraseStyle' is set to a selection-based style */
+    }
+    &.erased {
+      /* Styles specific to erased characters
+         i.e. characters to the right of the caret while VueTyper's
+              'eraseStyle' is set to a non-selection-based style */
+    }
+  }
+
+  .custom.caret {
+    /* Styles for the caret
+       e.g. background-color, animation, display */
+
+    &.pre-type {
+      /* Styles for the caret when it is idle before typing
+         i.e. before a string starts being typed, during 'preTypeDelay' */
+    }
+    &.pre-erase {
+      /* Styles for the caret when it is idle before erasing
+         i.e. before a string starts being erased, during 'preEraseDelay' */
+    }
+    &.idle {
+      /* Styles for the caret when it is idle, but VueTyper has not yet completed typing
+         i.e. when 'pre-type' or 'pre-erase' is set, but not 'complete' */
+    }
+    &.typing {
+      /* Styles for the caret while VueTyper is typing
+         i.e. when the caret is moving forwards */
+    }
+    &.selecting {
+      /* Styles for the caret while VueTyper is selecting
+         i.e. when the caret is moving backwards and 'eraseStyle' is
+         set to a selection-based style */
+    }
+    &.erasing {
+      /* Styles for the caret while VueTyper is erasing
+         i.e. when the caret is moving backwards and 'eraseStyle' is
+         set to a non-selection-based style */
+    }
+    &.complete {
+      /* Styles for the idle caret when VueTyper has finished all typing/erasing */
+    }
+  }
+}
+/* Base for label styling */
+[type="checkbox"]:not(:checked),
+[type="checkbox"]:checked {
+  position: absolute;
+  left: -9999px;
+}
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label {
+  position: relative;
+  padding-left: 1.95em;
+  cursor: pointer;
+}
+
+/* checkbox aspect */
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0;
+  width: 1.25em; height: 1.25em;
+  border: 2px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,.1);
+}
+/* checked mark aspect */
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after {
+  content: '\2713\0020';
+  position: absolute;
+  top: .15em; left: .22em;
+  font-size: 1.3em;
+  line-height: 0.8;
+  color: #09ad7e;
+  transition: all .2s;
+  font-family: 'Lucida Sans Unicode', 'Arial Unicode MS', Arial;
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after {
+  opacity: 0;
+  transform: scale(0);
+}
+[type="checkbox"]:checked + label:after {
+  opacity: 1;
+  transform: scale(1);
+}
+/* disabled checkbox */
+[type="checkbox"]:disabled:not(:checked) + label:before,
+[type="checkbox"]:disabled:checked + label:before {
+  box-shadow: none;
+  border-color: #bbb;
+  background-color: #ddd;
+}
+[type="checkbox"]:disabled:checked + label:after {
+  color: #999;
+}
+[type="checkbox"]:disabled + label {
+  color: #aaa;
+}
+/* accessibility */
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 2px dotted blue;
+}
+
+/* hover style just for information */
+label:hover:before {
+  border: 2px solid #4778d9!important;
+}
